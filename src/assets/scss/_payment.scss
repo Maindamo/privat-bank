@@ -1,0 +1,336 @@
+.content-card {
+  background: #fff;
+  border-radius: 4px;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  padding: 16px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 4px 0px, rgba(0, 0, 0, 0.12) 0px 0px 4px 0px;
+  transition: all 0.45s ease;
+  margin-bottom: 24px;
+}
+
+.title-card {
+  display: flex;
+  justify-content: space-between;
+  width: 328px;
+  padding-bottom: 8px;
+  font-size: 14px;
+  line-height: 22px;
+  display: flex;
+  align-items: center;
+  .card-title--left {
+    color: rgba(0, 0, 0, 0.54);
+  }
+  .card-title--right {
+    cursor: pointer;
+    color: rgb(141, 198, 65);
+    font-weight: 600;
+    display: flex;
+    transition: all 0.45s ease;
+    svg {
+      margin-left: 8px;
+    }
+    &:hover {
+      color: rgb(105, 159, 37);
+    }
+  }
+}
+
+.form-group {
+  position: relative;
+  .border-line--bottom {
+    transform: scaleX(0);
+  }
+  svg {
+    position: absolute;
+    right: 0;
+    top: 27px;
+    opacity: 0.24;
+  }
+}
+
+.input-card--label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  white-space: nowrap;
+  overflow-wrap: normal;
+  width: 100%;
+  font-size: 12px;
+  line-height: 20px;
+  overflow: visible;
+  text-align: left;
+  padding: 0px;
+  color: rgba(0, 0, 0, 0.54);
+  text-overflow: clip;
+  transition-duration: 450ms;
+  transition-timing-function: ease;
+}
+
+.input-border-container {
+  width: 100%;
+}
+
+.input-border-content {
+  position: relative;
+  .input-border--line {
+    transition-duration: 450ms;
+    transition-timing-function: ease;
+    border-color: rgba(0, 0, 0, 0.12);
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    border-style: none none solid;
+    box-sizing: content-box;
+    height: 0px;
+    margin: 0px;
+    width: 100%;
+  }
+  .border-line--top {
+    border-width: 1px;
+    opacity: 1;
+    transform: none;
+    transition-property: opacity;
+  }
+  .border-line--bottom {
+    transform: scaleX(0);
+    border-width: medium medium 1px;
+    transition-property: transform, border-color;
+  }
+}
+
+.form-input {
+  line-height: 1.5;
+  padding: 25px 30px 8px 0px;
+  text-align: left;
+  font-weight: 400;
+  font-size: 16px;
+  text-transform: none;
+  color: rgba(0, 0, 0, 0.87);
+  background: transparent;
+  box-shadow: none;
+  outline: none;
+  width: 100%;
+  min-width: 100%;
+  margin: 0px;
+  position: relative;
+  display: block;
+  transition-property: color, border, boxShadow, background;
+  box-sizing: border-box;
+  &::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.4);
+    transition: all 0.45s ease;
+  }
+  &:focus {
+    &::-webkit-input-placeholder {
+      color: rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+.form-input:hover + .input-border-container > .input-border-content > .border-line--bottom {
+  border-color: rgba(0, 0, 0, 0.54);
+  transform: scaleX(1);
+  border-width: 2px;
+}
+
+.form-input:focus + .input-border-container > .input-border-content > .border-line--bottom {
+  border-color: rgb(141, 198, 65);
+  transform: scaleX(1);
+  border-width: 2px;
+}
+
+.form-input:focus ~ .input-card--label {
+  color: rgb(141, 198, 65);
+}
+
+.container-payment {
+  background: #fff url("../img/background.png") no-repeat top center;
+  background-size: 1280px 670px;
+  position: relative;
+  z-index: 2;
+  border-radius: 2px;
+}
+
+.payment-content {
+  width: 328px;
+  margin: 0 auto;
+  min-height: 612px;
+  padding: 24px 0;
+}
+
+.payment-users {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.user-flip {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  opacity: 0.54;
+}
+
+.user-flip--disabled {
+  opacity: 0.24;
+}
+
+.container-user {
+  width: 33.33%;
+  text-align: center;
+  padding: 0 22px;
+  &:hover {
+    img {
+      border-color: rgba(0, 0, 0, 0.38);
+    }
+  }
+  img {
+    width: 48px;
+    height: 48px;
+    border: 2px solid transparent;
+    transition: border 450ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 50%;
+  }
+}
+
+.user-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  line-height: 20px;
+  padding-top: 8px;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+
+.container-users {
+  display: flex;
+  padding: 0 10px;
+}
+
+.select-card {
+  position: relative;
+  display: flex;
+  &:hover {
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 4px 8px 0px, rgba(0, 0, 0, 0.12) 0px 2px 8px 0px;
+  }
+}
+
+.card-img {
+  display: flex;
+  position: relative;
+  margin-right: 16px;
+}
+
+.background-card {
+  border-radius: 4px;
+  width: 75.84px;
+  height: 48px;
+}
+
+.background-type {
+  position: absolute;
+  bottom: 2px;
+  right: 3px;
+  svg {
+    height: 20px;
+    width: 30px;
+  }
+}
+
+.card-title {
+  color: rgba(0, 0, 0, 0.87);
+  font-weight: 400;
+  padding: 5px 0;
+  max-width: 175px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.card-price {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.card-list--open {
+  position: absolute;
+  right: 17px;
+  top: 27px;
+}
+
+.background-arms {
+  position: absolute;
+  bottom: 0;
+  right: 250px;
+  width: 160px;
+  height: 200px;
+}
+
+.input-ammount {
+  font-size: 24px;
+  font-weight: 400;
+  color: rgb(141, 198, 65);
+}
+
+.amount-details {
+  margin-top: 24px;
+  cursor: pointer;
+  color: #8dc641;
+  font-size: 16px;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.btn-success {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.btn-submit {
+  transition-property: background, border, box-shadow, color;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition-duration: 450ms;
+  transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  word-break: normal;
+  color: rgb(255, 255, 255);
+  background: rgb(141, 198, 65);
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 4px 0px, rgba(0, 0, 0, 0.12) 0px 0px 4px 0px;
+  white-space: nowrap;
+  border-style: none;
+  border-width: 0px;
+  border-color: rgb(141, 198, 65);
+  margin: 0px;
+}
+
+.input-currency {
+  font-size: 16px;
+  cursor: not-allowed;
+}
+
+.container-ammout {
+  display: flex;
+}
+
+.border-line-currency {
+  border-style: none none dotted !important;
+}
+.form-group--currency {
+  margin-top: 12px;
+  svg {
+    top: 25px;
+  }
+}

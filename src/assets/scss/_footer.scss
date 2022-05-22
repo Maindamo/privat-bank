@@ -1,0 +1,120 @@
+// ----------------- FOOTER -----------------
+
+.footer {
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.16), 0 0 4px 0 rgba(0, 0, 0, 0.16);
+
+  // .footer__container
+  &__container {
+    margin: 0 auto;
+    max-width: 1264px;
+    padding: 24px 32px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  // .footer__left
+  &__left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  // .footer__right
+  &__right {
+    justify-content: space-between;
+    align-items: flex-end;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+
+.footer__left {
+  .links-container {
+    margin-bottom: 24px;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+
+    .link-item {
+      color: #8dc641;
+      cursor: pointer;
+      white-space: nowrap;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 400;
+      text-decoration: none;
+      transition-duration: 650ms;
+      transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+
+      &:hover {
+        color: rgb(105, 159, 37);
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .phones {
+    margin-bottom: 24px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    .phone-item {
+      color: rgba(0, 0, 0, 0.54);
+      font-size: 16px;
+
+      b {
+        color: rgba(0, 0, 0, 0.87);
+        font-weight: 600;
+      }
+    }
+  }
+
+  .descritption {
+    font-size: 12px;
+    line-height: 20px;
+    color: rgba(0, 0, 0, 0.54);
+  }
+}
+
+.footer__right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  .app-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .app-item {
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.54);
+    font-size: 14px;
+    line-height: 22px;
+
+    .app-img {
+      margin-right: 10px;
+    }
+    .app-text {
+      .app-title {
+        color: rgba(0, 0, 0, 0.54);
+        font-size: 10px;
+        line-height: 10px;
+        display: inline-block;
+      }
+      .app-descr {
+        font-weight: 600;
+        font-size: 14px;
+      }
+    }
+  }
+}

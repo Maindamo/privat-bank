@@ -1,0 +1,109 @@
+.container-user-load {
+  text-align: center;
+  padding: 0 22px;
+}
+
+.user-img-load {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto;
+  color: transparent;
+  box-shadow: 0 -200px 100px -120px rgb(235, 235, 235) inset;
+  animation: load 2s infinite alternate;
+  border-radius: 50%;
+}
+
+.user-name-load {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  line-height: 20px;
+  margin-top: 15px;
+  white-space: nowrap;
+  word-wrap: normal;
+  padding: 1px 10px;
+  color: transparent;
+  box-shadow: 0 -200px 100px -120px rgb(235, 235, 235) inset;
+  animation: load 2s infinite alternate;
+  border-radius: 4px;
+}
+
+.card-form-text-load {
+  width: 100%;
+}
+
+.title-card-load {
+  font-weight: 600;
+  display: flex;
+  color: transparent;
+  box-shadow: 0 -200px 100px -120px rgb(235, 235, 235) inset;
+  animation: load 2s infinite alternate;
+  border-radius: 4px;
+}
+
+.card-title-load {
+  width: 100%;
+  font-weight: 400;
+  padding: 4px 0;
+  margin-bottom: 3px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: transparent;
+  box-shadow: 0 -200px 100px -120px rgb(235, 235, 235) inset;
+  animation: load 2s infinite alternate;
+  border-radius: 4px;
+}
+
+.card-price-load {
+  width: 100%;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 600;
+  color: transparent;
+  box-shadow: 0 -200px 100px -120px rgb(235, 235, 235) inset;
+  animation: load 2s infinite alternate;
+  border-radius: 4px;
+}
+
+.background-card-load {
+  width: 75.84px;
+  height: 48px;
+  color: transparent;
+  box-shadow: 0 -200px 100px -120px rgb(235, 235, 235) inset;
+  animation: load 2s infinite alternate;
+  border-radius: 4px;
+}
+
+.receiver-card-cont-load {
+  width: 294px;
+  height: 57px;
+  color: transparent;
+  box-shadow: 0 -200px 100px -120px rgb(235, 235, 235) inset;
+  animation: load 2s infinite alternate;
+  border-radius: 4px;
+}
+
+.container-ammout-load {
+  width: 328px;
+  height: 69px;
+  color: transparent;
+  box-shadow: 0 -200px 100px -120px rgb(235, 235, 235) inset;
+  animation: load 2s infinite alternate;
+  border-radius: 4px;
+}
+
+.btn-submit-load {
+  width: 127px;
+  height: 40px;
+  color: transparent;
+  box-shadow: 0 -200px 100px -120px rgb(235, 235, 235) inset;
+  animation: load 2s infinite alternate;
+  border-radius: 4px;
+}
+
+@keyframes load {
+  50% {
+    box-shadow: 0 -200px 100px -100px rgb(219, 219, 219) inset;
+  }
+}

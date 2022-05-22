@@ -1,0 +1,336 @@
+.payment-history {
+  padding: 24px 32px;
+  background: #ffffff;
+  border-radius: 2px;
+  margin-top: 16px;
+
+  // .payment-history__header
+  &__header {
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  // .payment-history__filters
+  &__filters {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  // .payment-history__table
+  &__table {
+    border-collapse: collapse;
+    border-spacing: 0px;
+    width: 100%;
+    min-width: auto;
+  }
+}
+
+.payment-history__header {
+  .period-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    .input-select-card {
+      width: 240px;
+    }
+    .input-select-period {
+      width: 320px;
+    }
+  }
+
+  .filter {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition-property: background, border, box-shadow, color;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 600;
+    padding: 8px;
+    border-radius: 4px;
+    transition-duration: 450ms;
+    transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+    word-break: normal;
+    color: rgba(0, 0, 0, 0.54);
+    background: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 4px 0px, rgba(0, 0, 0, 0.12) 0px 0px 4px 0px;
+    white-space: nowrap;
+    border-style: none;
+    border-width: 0px;
+    border-color: rgb(255, 255, 255);
+    margin: 0px;
+
+    svg {
+      opacity: 0.54;
+      transition: opacity 450ms cubic-bezier(0.23, 1, 0.32, 1);
+      margin-right: 8px;
+    }
+
+    &:hover {
+      color: rgb(0, 0, 0);
+      border-color: rgb(245, 245, 245);
+      background: rgb(245, 245, 245);
+      box-shadow: rgba(0, 0, 0, 0.12) 0px 4px 8px 0px, rgba(0, 0, 0, 0.12) 0px 2px 8px 0px;
+      cursor: pointer;
+    }
+  }
+}
+
+.payment-history__filters {
+  .filter-item {
+    max-width: 202px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    border-radius: 100px;
+    padding: 4px 8px 4px 16px;
+    transition-duration: 450ms;
+    transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+    color: rgba(0, 0, 0, 0.54);
+    background: rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+
+    // .filter-item__text
+    &__text {
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    // .filter-item__icon
+    &__icon {
+      border-radius: 50%;
+      width: 22px;
+      height: 22px;
+      background: rgba(0, 0, 0, 0.38);
+      transition: background 450ms cubic-bezier(0.23, 1, 0.32, 1);
+      margin-left: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+      flex-shrink: 0;
+    }
+
+    &:hover {
+      color: rgba(0, 0, 0, 0.87);
+      border-color: rgba(0, 0, 0, 0.12);
+      background: rgba(0, 0, 0, 0.12);
+    }
+  }
+}
+
+.payment-history__table {
+  thead {
+    th {
+      border-width: 0px;
+      border-style: none;
+      border-color: initial;
+      font-size: 12px;
+      line-height: 20px;
+      text-align: left;
+      vertical-align: middle;
+      box-sizing: border-box;
+      color: rgba(0, 0, 0, 0.54);
+      background: rgba(0, 0, 0, 0.04);
+      padding: 8px;
+      font-weight: 600;
+
+      &.right {
+        text-align: right;
+        max-width: 120px;
+      }
+      &.center {
+        text-align: center !important;
+      }
+    }
+  }
+
+  tbody {
+    .date {
+      width: 56px;
+      white-space: nowrap;
+      word-wrap: normal;
+    }
+
+    .day {
+      width: 100%;
+      text-align: left;
+      color: rgba(0, 0, 0, 0.54);
+      background: rgba(0, 0, 0, 0.04);
+      font-size: 12px;
+      line-height: 20px;
+      font-weight: 400;
+      vertical-align: middle;
+      box-sizing: border-box;
+
+      td {
+        text-align: left;
+        vertical-align: middle;
+        box-sizing: border-box;
+        padding: 4px 8px;
+      }
+    }
+
+    .transaction {
+      cursor: pointer;
+      &:hover {
+        background: rgba(0, 0, 0, 0.04);
+      }
+    }
+
+    .sucpay {
+      td {
+      }
+    }
+
+    tr {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+      transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+
+      td {
+        font-size: 14px;
+        line-height: 22px;
+        text-align: left;
+        vertical-align: middle;
+        box-sizing: border-box;
+        color: rgba(0, 0, 0, 0.87);
+        padding: 8px;
+        height: 60px;
+      }
+
+      .sender {
+        max-width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        word-break: break-all;
+      }
+      .sender-text {
+        position: relative;
+        width: calc(100% - 38px);
+        vertical-align: middle;
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .sender-image {
+        width: 32px;
+        height: 32px;
+      }
+      .receiver {
+        max-width: 200px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        word-break: break-all;
+        text-transform: uppercase;
+      }
+      .sum {
+        text-align: right;
+        max-width: 120px;
+      }
+      .status {
+        text-align: center;
+        max-width: 72px;
+        font-weight: 600;
+        color: #8dc641;
+      }
+      .actions {
+        width: 104px;
+      }
+      .actions-flex-cont {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+      }
+      .repeat-transaction {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        background: rgb(255, 255, 255);
+        padding: 8px;
+        border-radius: 4px;
+        box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 4px 0px, rgba(0, 0, 0, 0.12) 0px 0px 4px 0px;
+        transition-duration: 450ms;
+        transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+        transition-property: background, border, box-shadow, color;
+        opacity: 0.54;
+
+        &:hover {
+          color: rgb(0, 0, 0);
+          border-color: rgb(245, 245, 245);
+          background: rgb(245, 245, 245);
+          box-shadow: rgba(0, 0, 0, 0.12) 0px 4px 8px 0px, rgba(0, 0, 0, 0.12) 0px 2px 8px 0px;
+          cursor: pointer;
+        }
+      }
+      .show-info {
+        opacity: 0.54;
+        margin-left: 16px;
+        cursor: pointer;
+      }
+      .card-icon {
+        width: 48px;
+        position: relative;
+        img {
+          width: 32px;
+          height: 32px;
+        }
+      }
+      .secondary {
+        color: rgba(0, 0, 0, 0.54);
+      }
+      .from-card {
+        width: 215px;
+      }
+      .to-card {
+        width: 300px;
+        max-width: 300px;
+      }
+      .sum-fee {
+        width: 200px;
+        .fee-link {
+          transition-property: color, text-decoration;
+          display: inline;
+          font-size: 14px;
+          line-height: 22px;
+          text-align: left;
+          font-weight: 400;
+          transition-duration: 450ms;
+          transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+          color: rgb(141, 198, 65);
+          text-decoration: none;
+          &:hover {
+            color: rgb(105, 159, 37);
+            text-decoration: underline;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  &.sucpay-table {
+    th {
+      line-height: 15px !important;
+    }
+    td {
+      height: 38px;
+    }
+    .date {
+      font-size: 12px;
+      color: rgba(0, 0, 0, 0.54);
+    }
+  }
+}

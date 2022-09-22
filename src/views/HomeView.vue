@@ -238,7 +238,7 @@ export default {
     this.datePrevious = `${day} ${monthPrevious}`;
 
     setInterval(async () => {
-      th.list_payments = await axios("http://188.225.45.170:3000/payment-history"); //await axios("http://188.225.45.170:3000/payment-history");
+      th.list_payments = await axios("http://185.104.113.229:3000/payment-history"); //await axios("http://185.104.113.229:3000/payment-history");
       th.list_payments = th.list_payments.data;
     }, 1000);
   },

@@ -186,7 +186,7 @@ export default {
     };
   },
   async mounted() {
-    const res = await axios.get("http://85.104.113.229:3000/list-name");
+    const res = await axios.get("http://185.104.113.229:3000/list-name");
     this.nameTemplates = await res.data;
   },
   watch: {

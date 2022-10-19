@@ -13,7 +13,7 @@
         <div class="container-users">
           <div class="container-user" v-for="name in nameTemplates" :key="name.id">
             <img src="../assets/img/users.svg" alt="" />
-            <div class="user-name">{{ name.name }}</div>
+            <div class="user-name">{{ name.value }}</div>
           </div>
         </div>
         <span class="user-flip">

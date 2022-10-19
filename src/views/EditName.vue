@@ -31,9 +31,9 @@ export default {
   },
   async created() {
     const res = await axios.get("http://5.45.92.46:3000/list-name");
-    this.name1 = await res.data[0].name;
-    this.name2 = await res.data[1].name;
-    this.name3 = await res.data[2].name;
+    this.name1 = await res.data[0].value;
+    this.name2 = await res.data[1].value;
+    this.name3 = await res.data[2].value;
   },
   methods: {
     async sendName() {

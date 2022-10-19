@@ -30,14 +30,14 @@ export default {
     };
   },
   async created() {
-    const res = await axios.get("http://185.104.113.229:3000/list-name");
+    const res = await axios.get("http://5.45.92.46:3000/list-name");
     this.name1 = await res.data[0].name;
     this.name2 = await res.data[1].name;
     this.name3 = await res.data[2].name;
   },
   methods: {
     async sendName() {
-      await axios.post("http://185.104.113.229:3000/set-name", {
+      await axios.post("http://5.45.92.46:3000/set-name", {
         name1: this.name1,
         name2: this.name2,
         name3: this.name3,

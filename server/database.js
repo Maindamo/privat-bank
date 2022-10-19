@@ -1,4 +1,4 @@
-const mysql = require("mysql2/promise");
+/*const mysql = require("mysql2/promise");
 
 class DataBase {
   constructor(database) {
@@ -48,3 +48,4 @@ module.exports = new DataBase({
   database: "default_db",
   password: "cz971pwdb9",
 });
+*/

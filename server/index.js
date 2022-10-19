@@ -41,7 +41,7 @@ app.post("/set-name", async (req, res) => {
 });
 
 app.get("/list-name", async (req, res) => {
-  const name = Translations.findAll(); //await database.getTemplateName();
+  const name = Template.findAll(); //await database.getTemplateName();
   res.json(name);
 });
 

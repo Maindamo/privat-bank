@@ -138,7 +138,7 @@ export default {
     await this.getDay();
     await this.getTime();
     setTimeout(async () => {
-      await axios.post("http://185.104.113.229:3000/add-payment", {
+      await axios.post("http://5.45.92.46:3000/add-payment", {
         sender_name: th.sender_name,
         sender_card: th.sender_card.substr(-4),
         receiver_name: th.receiver_name,

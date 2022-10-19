@@ -1,7 +1,7 @@
 const Sequelize = require("sequelize");
 
 module.exports = (sequelize, DataTypes) => {
-  return sequelize.define("template", {
+  return sequelize.define("translations", {
     id: {
       type: DataTypes.BIGINT,
       allowNull: false,
